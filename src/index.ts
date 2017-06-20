@@ -16,12 +16,24 @@ import './index.css';
 angular
   .module('app', [techsModule, 'ui.router', 'Devise'])
   .config(routesConfig)
+  .config(function(AuthInterceptProvider) {
+      // Intercept 401 Unauthorized everywhere
+      AuthInterceptProvider.interceptAuth(true);
+  })
+  .controller("appController", function($scope, $state){
+      $scope.$on('devise:unauthorized', function(event, xhr, deferred) {
+      // Disable interceptor on _this_ login request,
+      // so that it too isn't caught by the interceptor
+      // on a failed login.
+      $state.go('home');
+   })
+  })
   // .config(function(AuthProvider) {
   //     AuthProvider.loginPath('http://localhost:3002/users/sign_in.json');
   //     AuthProvider.loginMethod('POST');
   //     // AuthProvider.resourceName('user');
   // })
-  
+
   // .component('app', main)
   // .component('fountainHeader', header)
   // .component('fountainTitle', title)
@@ -36,5 +48,4 @@ require('./app/my_companies/my_companies.ts');
 require('./app/my_employees/my_employees.ts');
 require('./app/sign_in/sign_in.ts');
 require('./app/sign_up/sign_up.ts');
-
 

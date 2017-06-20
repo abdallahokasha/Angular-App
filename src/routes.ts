@@ -51,7 +51,18 @@ function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvi
       url:'/my_companies',
       controller: 'my_companiesController',
       template: require('./app/my_companies/my_companies.html')
-    })
+  
+  // ,onEnter: [
+  //   '$state', 'Auth',
+  //   function($state, Auth) {
+  //     Auth.currentUser().then(function(user) {}, function(err) {
+  //       $state.go('home');// user not logged in
+  //       alert('Please, sign in before accesssing this');// user not logged in
+  //     });
+  //   }
+  // ]
+
+  })
     //my_employees component
     .state('my_employees', {
       url:'/my_employees',

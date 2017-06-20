@@ -20,9 +20,9 @@
 
   </head>
 
-  <body ng-app="app" >
+  <body ng-app="app" ng-controller="appController">
 
-    <h2> Simple App </h2>        
+    <h2> Simple App </h2>       
         <a ui-sref="home"ui-sref-active="active"> Home</a>
         <br>
         <a ui-sref="sign_in"ui-sref-active="active"> sign in</a>
@@ -31,6 +31,9 @@
         <br><br>
         <a ui-sref="my_companies" ui-sref-active="active"> My Companies</a>
         <br><br>
+        <a ui-sref="my_employees" ui-sref-active="active"> My Employees</a>
+        <br><br>
+
     <ui-view></ui-view>
   </body>
 </html>
