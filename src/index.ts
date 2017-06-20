@@ -20,14 +20,21 @@ angular
       // Intercept 401 Unauthorized everywhere
       AuthInterceptProvider.interceptAuth(true);
   })
+  //needed to send cookie with each request
+  .config(function ($httpProvider) {
+    $httpProvider.defaults.withCredentials = true;
+    //rest of route code
+})
   .controller("appController", function($scope, $state){
       $scope.$on('devise:unauthorized', function(event, xhr, deferred) {
       // Disable interceptor on _this_ login request,
       // so that it too isn't caught by the interceptor
       // on a failed login.
+      debugger
       $state.go('home');
    })
   })
+
   // .config(function(AuthProvider) {
   //     AuthProvider.loginPath('http://localhost:3002/users/sign_in.json');
   //     AuthProvider.loginMethod('POST');
