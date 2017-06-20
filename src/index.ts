@@ -55,4 +55,6 @@ require('./app/my_companies/my_companies.ts');
 require('./app/my_employees/my_employees.ts');
 require('./app/sign_in/sign_in.ts');
 require('./app/sign_up/sign_up.ts');
+require('./app/sign_out/sign_out.ts');
+
 

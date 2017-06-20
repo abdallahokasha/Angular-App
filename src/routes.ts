@@ -75,6 +75,13 @@ function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvi
       controller: 'signInCtrl',
       template: require('./app/sign_in/sign_in.html')
     })
+     //sign_out
+    .state('sign_out', {
+      url:'/sign_out',
+      controller: 'signOutCtrl',
+      template: require('./app/sign_out/sign_out.html')
+    })
+    
    //sign_up
     .state('sign_up', {
       url:'/sign_up',

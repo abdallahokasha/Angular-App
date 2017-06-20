@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+   </script>
+   
+   <script src="http://unpkg.com/angular-ui-router/release/angular-ui-router.min.js">
+   </script>
+
+   <script src="devise-min.js"> </script>
+<script src="sign_out.js"></script>
+<script src="app.js"></script>
+
+<title> Sign out </title>
+</head>
+
+<style>
+a, h2, label, input .sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<body ng-controller="signOutCtrl">
+<h2>Sign out</h2>  
+{{user.signOut()}}
+<script>
+//sign_out.js file content can be replaced here.
+</script>
+
+</body>
+</html>
