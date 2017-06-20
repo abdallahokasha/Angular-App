@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+   </script>
+
+<script src="apply.js"></script>
+<script src="app.js"></script>
+
+<title> Apply </title>
+</head>
+
+<style>
+a, h2, label, input .sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+<body ng-app="myApp">
+  
+<h2> Applying </h2>
+
+<div ng-app="myApp" ng-controller="applyController"> 
+  <div id="id1">
+   
+      <label><b>Employee ID</b></label><br>
+      <input type="text" placeholder="Enter Employee ID" name="emp_id" required>
+      <br><br>
+      <label><b>company ID</b></label><br><br>
+      <input type="text" placeholder="Enter Company ID" name="com_id" required>
+      
+  </div>
+
+    <h2> Result: {{myRes}} </h2>
+</div>
+
+<script>
+//apply.js file content can be replaced here.
+</script>
+
+</body>
+</html>

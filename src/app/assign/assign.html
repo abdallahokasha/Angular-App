@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+   </script>
+
+<script src="assign.js"></script>
+<script src="app.js"></script>
+
+<title> Assign </title>
+</head>
+
+<style>
+a, h2, label, input .sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+<body ng-app="myApp">
+
+<div ng-app="myApp" ng-controller="assignController">   
+<h2> Assign </h2>
+  <div id="id1">
+   
+      <label><b>company ID</b></label><br>
+      <input type="text" placeholder="Enter Company ID " ng-model="com_id" required>
+      <br><br>
+      <label><b>Employee ID</b></label><br><br>
+      <input type="text" placeholder="Enter Employee ID " ng-model="emp_id" required>   
+
+  </div>
+
+    <h2> Result : {{myRes}} </h2>
+</div>
+
+<script>
+//assign.js file content can be replaced here.
+</script>
+
+</body>
+</html>

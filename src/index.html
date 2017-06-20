@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="http://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>-->
+
+<!--    
+    <base href="/">
+    <meta charset="utf-8">
+    <title>FountainJS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
+    -->
+    <style>
+        .active { color: red; font-weight: bold; }
+    </style>
+<base href="/">
+
+  </head>
+
+  <body ng-app="app" >
+
+    <h2> Simple App </h2>        
+        <a ui-sref="home"ui-sref-active="active"> Home</a>
+        <br>
+        <a ui-sref="sign_in"ui-sref-active="active"> sign in</a>
+        <br> <br>
+        <a ui-sref="sign_up" ui-sref-active="active"> sign up</a> 
+        <br><br>
+        <a ui-sref="my_companies" ui-sref-active="active"> My Companies</a>
+        <br><br>
+    <ui-view></ui-view>
+  </body>
+</html>
